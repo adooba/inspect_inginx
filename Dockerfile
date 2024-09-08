@@ -1,6 +1,6 @@
 FROM python:3.9
 LABEL authors="alex"
-RUN apt-get update && apt-get install -y top
+RUN apt-get update
 WORKDIR /opt/app
 COPY requirements.txt .
 RUN pip install -r requirements.txt
