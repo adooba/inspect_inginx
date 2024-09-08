@@ -18,6 +18,8 @@ services:
             container_name: run_app
             expose:
                     - "2000"
+            ports:
+                    - "2000:2000"
             networks:
                     - app-network
 
