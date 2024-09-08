@@ -1,12 +1,13 @@
 version: '3'
 services:
     nginx:
-            image: nginx:latest
+            image: nginx:1.27.1
             container_name: nginx
             volumes:
                     - ./site_conf:/etc/nginx/conf.d/adooba.conf
             ports:
                     - "80:80"
+                    - "8080:80"
                     - "443:443"
             networks:
                     - app-network
