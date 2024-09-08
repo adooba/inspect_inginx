@@ -6,7 +6,7 @@ server {
 
     location / {
         proxy_pass http://adooba.ru:2100;
-        proxy_set_header X-Forwarded-For-80 $proxy_add_x_forwarded_for;  # +
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;  # +
         proxy_set_header Host $http_host;  # +
     }
 }
@@ -16,7 +16,7 @@ server {
     location / {
         proxy_pass http://adooba.ru:2000;
         proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For-2100 $proxy_add_x_forwarded_for;  # +
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;  # +
         proxy_set_header Host $http_host;  # +
     }
 }
