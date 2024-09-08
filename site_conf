@@ -5,7 +5,8 @@ server {
 
     #access_log  /var/log/nginx/host.access.log  main;
    location / {
-            proxy_pass http://adooba.ru:2000;
+                proxy_pass http://adooba.ru:2000;
+                proxy_set_header X-Real-IP $remote_addr;
     }
 
     #location / {
